@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">InventoryMO</string>
+    <string name="waiting_for_recognition">Ожидание распознования...</string>
+</resources>

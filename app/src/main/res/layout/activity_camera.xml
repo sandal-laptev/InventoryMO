@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Gallery above capture button -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photo_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:padding="4dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"/>
+
+    <!-- Capture button -->
+    <ImageButton
+        android:id="@+id/capture_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/ic_capture"
+        android:contentDescription="Сделать снимок" />
+
+    <!-- Send button -->
+    <ImageButton
+        android:id="@+id/send_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/ic_send"
+        android:contentDescription="Отправить фото"
+        android:visibility="gone" />
+
+    <!-- Background for preview -->
+    <View
+        android:id="@+id/fullscreen_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:visibility="gone" />
+
+    <!-- ViewPager for full screen preview -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/fullscreen_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>
